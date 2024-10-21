@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+;
+}
+
+@keyframes blink {
+    0% {
+      color: red;
+    }
+    50% {
+      color: yellow;
+    }
+    100% {
+      color: green;
+    }
+  }
+  
+  .blinking-text {
+    animation: blink 1s infinite; /* 1s زمان انیمیشن و infinite یعنی بی‌نهایت تکرار شود */
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
