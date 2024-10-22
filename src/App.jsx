@@ -1,6 +1,7 @@
 import { FaHandPaper, FaHandPeace, FaHandRock } from "react-icons/fa";
 import { useGameStore } from "./UseGameStore";
 import "./App.css";
+import { FaArrowRightLong } from "react-icons/fa6";
 function App() {
   const {
     playerChoice,
@@ -141,15 +142,30 @@ function App() {
               >
                 X
               </button>
-              <div className="opacity-50 my-20 relative w-96 min-h-80 flex justify-center items-center">
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex items-center justify-center border-[1rem] border-blue-500 rounded-full w-28 h-28  xs:w-36 xs:h-36 bg-white cursor-pointer">
+              <div className="relative w-96 h-80 flex justify-center items-center">
+                {/* Hand icons */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 flex items-center justify-center border-[1rem] border-blue-500 rounded-full w-28 h-28 bg-white">
                   <FaHandPaper className="text-[3rem] opacity-80 " />
                 </div>
-                <div className="absolute top-0 left-0 flex items-center justify-center border-[1rem] border-yellow-500 rounded-full w-28 h-28 xs:w-36  xs:h-36 bg-white cursor-pointer">
+                <div className="absolute bottom-0 left-0 flex items-center justify-center border-[1rem] border-yellow-500 rounded-full w-28 h-28 bg-white">
                   <FaHandPeace className="text-[3rem] opacity-80 rotate-45" />
                 </div>
-                <div className="absolute top-0 right-0 flex items-center justify-center border-[1rem] border-red-500 rounded-full w-28 h-28 xs:w-36  xs:h-36 bg-white cursor-pointer">
+                <div className="absolute bottom-0 right-0 flex items-center justify-center border-[1rem] border-red-500 rounded-full w-28 h-28 bg-white">
                   <FaHandRock className="text-[3rem] opacity-80" />
+                </div>
+
+                {/* Arrows */}
+                <div className="absolute bottom-8 left-[45%] ">
+                  <FaArrowRightLong className="text-3xl  opacity-70 rotate-180" />
+                  <p>BEATS</p>
+                </div>
+                <div className="absolute top-[40%] left-[30%] -rotate-[55deg]">
+                  <FaArrowRightLong className="text-3xl opacity-70" />
+                  <p>BEATS</p>
+                </div>
+                <div className="absolute top-[40%] right-[30%] -rotate-[305deg]">
+                  <FaArrowRightLong className="text-3xl opacity-70" />
+                  <p>BEATS</p>
                 </div>
               </div>
             </div>
